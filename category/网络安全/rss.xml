@@ -1,16 +1,22 @@
 <?xml version="1.0"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-    <id>http://example.com</id>
-    <title>Sugarcane</title>
-    <link href="http://example.com" />
-    <updated>2023-11-05T16:00:00.000Z</updated>
-    <category term="标签1" />
-    <category term="标签2" />
-    <entry>
-        <id>http://example.com/2023/11/06/Web-%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1%E5%9F%B9%E8%AE%AD/</id>
-        <title>记录一次培训</title>
-        <link rel="alternate" href="http://example.com/2023/11/06/Web-%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1%E5%9F%B9%E8%AE%AD/"/>
-        <content type="html">&lt;p&gt;&lt;strong&gt;Hacker&lt;/strong&gt;&lt;br /&gt;
+<rss version="2.0">
+    <channel>
+        <title>Sugarcane • Posts by &#34;网络安全&#34; category</title>
+        <link>http://example.com</link>
+        <description></description>
+        <language>zh-CN</language>
+        <pubDate>Mon, 06 Nov 2023 00:00:00 +0800</pubDate>
+        <lastBuildDate>Mon, 06 Nov 2023 00:00:00 +0800</lastBuildDate>
+        <category>标签1</category>
+        <category>标签2</category>
+        <item>
+            <guid isPermalink="true">http://example.com/2023/11/06/Web-%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1%E5%9F%B9%E8%AE%AD/</guid>
+            <title>记录一次培训</title>
+            <link>http://example.com/2023/11/06/Web-%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1%E5%9F%B9%E8%AE%AD/</link>
+            <category>标签1</category>
+            <category>标签2</category>
+            <pubDate>Mon, 06 Nov 2023 00:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;&lt;strong&gt;Hacker&lt;/strong&gt;&lt;br /&gt;
 1. 植入后门&lt;br /&gt;
  Lhost = 攻击机 IP（访问 kali 攻击机 IP-ifconfig）&lt;br /&gt;
 LPort = 攻击机端口（自定义 1-65535）&lt;br /&gt;
@@ -170,9 +176,7 @@ network&lt;br /&gt;
 打开火绒&lt;br /&gt;
 打开 host 修改器&lt;br /&gt;
 输入：192.168.86.133 域名（不要带 http）&lt;/p&gt;
-</content>
-        <category term="标签1" />
-        <category term="标签2" />
-        <updated>2023-11-05T16:00:00.000Z</updated>
-    </entry>
-</feed>
+ ]]></description>
+        </item>
+    </channel>
+</rss>

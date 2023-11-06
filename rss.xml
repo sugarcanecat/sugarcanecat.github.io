@@ -5,13 +5,17 @@
         <link>http://example.com</link>
         <description></description>
         <language>zh-CN</language>
-        <pubDate>Mon, 06 Nov 2023 14:10:18 +0800</pubDate>
-        <lastBuildDate>Mon, 06 Nov 2023 14:10:18 +0800</lastBuildDate>
+        <pubDate>Mon, 06 Nov 2023 00:00:00 +0800</pubDate>
+        <lastBuildDate>Mon, 06 Nov 2023 00:00:00 +0800</lastBuildDate>
+        <category>标签1</category>
+        <category>标签2</category>
         <item>
             <guid isPermalink="true">http://example.com/2023/11/06/Web-%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1%E5%9F%B9%E8%AE%AD/</guid>
-            <title></title>
+            <title>记录一次培训</title>
             <link>http://example.com/2023/11/06/Web-%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1%E5%9F%B9%E8%AE%AD/</link>
-            <pubDate>Mon, 06 Nov 2023 14:10:18 +0800</pubDate>
+            <category>标签1</category>
+            <category>标签2</category>
+            <pubDate>Mon, 06 Nov 2023 00:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;&lt;strong&gt;Hacker&lt;/strong&gt;&lt;br /&gt;
 1. 植入后门&lt;br /&gt;
  Lhost = 攻击机 IP（访问 kali 攻击机 IP-ifconfig）&lt;br /&gt;
