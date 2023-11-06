@@ -4,8 +4,7 @@
     <title>Sugarcane • Posts by &#34;网络安全&#34; category</title>
     <link href="http://example.com" />
     <updated>2023-11-05T16:00:00.000Z</updated>
-    <category term="标签1" />
-    <category term="标签2" />
+    <category term="Web" />
     <entry>
         <id>http://example.com/2023/11/06/Web-%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1%E5%9F%B9%E8%AE%AD/</id>
         <title>记录一次培训</title>
@@ -171,8 +170,7 @@ network&lt;br /&gt;
 打开 host 修改器&lt;br /&gt;
 输入：192.168.86.133 域名（不要带 http）&lt;/p&gt;
 </content>
-        <category term="标签1" />
-        <category term="标签2" />
+        <category term="Web" />
         <updated>2023-11-05T16:00:00.000Z</updated>
     </entry>
 </feed>
