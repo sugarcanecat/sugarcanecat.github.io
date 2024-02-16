@@ -1,16 +1,21 @@
 <?xml version="1.0"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-    <id>http://example.com</id>
-    <title>Sugarcane • Posts by &#34;hgame2024&#34; category</title>
-    <link href="http://example.com" />
-    <updated>2024-02-16T11:21:20.631Z</updated>
-    <category term="Web" />
-    <category term="CTF" />
-    <entry>
-        <id>http://example.com/2024/02/16/hgame2024-hgame2024-week1/</id>
-        <title>hgame2024-week1</title>
-        <link rel="alternate" href="http://example.com/2024/02/16/hgame2024-hgame2024-week1/"/>
-        <content type="html">&lt;p&gt;&lt;strong&gt;Misc&lt;/strong&gt;&lt;/p&gt;
+<rss version="2.0">
+    <channel>
+        <title>Sugarcane • Posts by &#34;hgame2024比赛&#34; category</title>
+        <link>http://example.com</link>
+        <description></description>
+        <language>zh-CN</language>
+        <pubDate>Fri, 16 Feb 2024 19:21:20 +0800</pubDate>
+        <lastBuildDate>Fri, 16 Feb 2024 19:21:20 +0800</lastBuildDate>
+        <category>Web</category>
+        <category>CTF</category>
+        <item>
+            <guid isPermalink="true">http://example.com/2024/02/16/hgame2024-hgame2024-week1/</guid>
+            <title>hgame2024-week1</title>
+            <link>http://example.com/2024/02/16/hgame2024-hgame2024-week1/</link>
+            <category>CTF</category>
+            <pubDate>Fri, 16 Feb 2024 19:21:20 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;&lt;strong&gt;Misc&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;介于当时只练习了 Misc 类的题目，本次的 hgame 只做了 Misc 的题目（虽然也没有全部做出来）&lt;/p&gt;
 &lt;p&gt;SignIn&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sYWIubWFnaWNvbmNoLmNvbS94emsv&#34;&gt;https://lab.magiconch.com/xzk/&lt;/span&gt;&lt;br /&gt;
@@ -49,8 +54,7 @@
 &lt;p&gt;&lt;a href=&#34;https://postimg.cc/TLmK9WHF&#34;&gt;&lt;img data-src=&#34;https://i.postimg.cc/gJt3GVyz/QQ-20240216203914.png&#34; alt=&#34;QQ-20240216203914.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;不过官方 wp 给的是修复图片的宽高来看到可爱的希儿小姐，然后拖到 stegsolve 里面去看 LSB。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://postimg.cc/XpngrVr4&#34;&gt;&lt;img data-src=&#34;https://i.postimg.cc/VLCZHv1r/xier.png&#34; alt=&#34;xier.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-</content>
-        <category term="CTF" />
-        <updated>2024-02-16T11:21:20.631Z</updated>
-    </entry>
-</feed>
+ ]]></description>
+        </item>
+    </channel>
+</rss>
