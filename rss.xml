@@ -36,17 +36,22 @@
 &lt;li&gt;此时救世主出现，Linux 下有一个工具专门查看 PNG 图片的 ——&lt;em&gt;zsteg&lt;/em&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Linux 下使用方法：&lt;br /&gt;
-查看帮助&lt;br /&gt;
- zsteg -h&lt;/p&gt;
-&lt;p&gt;查看 LSB 信息&lt;br /&gt;
- zsteg pcat.png&lt;/p&gt;
+查看帮助&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;zsteg -h
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;查看 LSB 信息&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;zsteg pcat.png
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;检测 zlib&lt;br /&gt;
--b 的位数是从 1 开始的&lt;br /&gt;
- zsteg zlib.bmp -b 1 -o xy -v&lt;/p&gt;
-&lt;p&gt;显示细节&lt;br /&gt;
- zsteg pcat.png -v&lt;/p&gt;
-&lt;p&gt;尝试所有已知的组合&lt;br /&gt;
- zsteg pcat.png -a&lt;/p&gt;
+-b 的位数是从 1 开始的&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;zsteg zlib.bmp -b 1 -o xy -v
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;显示细节&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;zsteg pcat.png -v
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;尝试所有已知的组合&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;zsteg pcat.png -a
+&lt;/code&gt;&lt;/pre&gt;
 &lt;ol start=&#34;6&#34;&gt;
 &lt;li&gt;到了回收伏笔的时候了，题目是我们可爱的希儿小姐，那么就应该想到希尔解密。&lt;br /&gt;
 这里用 zsteg 查看 LSB 的时候已经出现了希尔解密要用到的矩阵密钥，这下真游戏结束了。&lt;/li&gt;
@@ -64,18 +69,43 @@
 &lt;li&gt;先拿工具试了一通没搞出什么名堂，JPG 图片嘛，后来搜索引擎又搜烂了找到个工具 ——stegdetect&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;使用方法：&lt;/p&gt;
-&lt;p&gt;将图片复制到 stegdetect.exe 所在目录下，右键 PowerShell 命令&lt;br /&gt;
-.\stegdetect.exe -tjopi -s 10.0 hide.jpg&lt;br /&gt;
- 检测该图片用的是哪种加密方式&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://postimg.cc/bG4L3SRb&#34;&gt;&lt;img data-src=&#34;https://i.postimg.cc/3Rx6rg4L/QQ-20240219132025.png&#34; alt=&#34;QQ-20240219132025.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;
-2. 发现是 jphide 加密 (这里的 * 表示概率程度，很有可能是这种加密，但也有可能不是的意思)&lt;/p&gt;
-&lt;ol start=&#34;3&#34;&gt;
-&lt;li&gt;然而我们并不知道密码是啥，这时可以用 stegdetect 下的 stegbreak 字典破解，同样图片和 stegbreak.exe 在同一目录下，命令&lt;br /&gt;
-.\stegbreak -r rules.ini -f password.txt -r p hide.jpg&lt;br /&gt;
- 破解密码&lt;/li&gt;
+&lt;p&gt;将图片复制到 stegdetect.exe 所在目录下，右键 PowerShell 命令&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;.\stegdetect.exe -tjopi -s 10.0 hide.jpg
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;检测该图片用的是哪种加密方式&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://postimg.cc/bG4L3SRb&#34;&gt;&lt;img data-src=&#34;https://i.postimg.cc/3Rx6rg4L/QQ-20240219132025.png&#34; alt=&#34;QQ-20240219132025.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;发现是 jphide 加密 (这里的 * 表示概率程度，很有可能是这种加密，但也有可能不是的意思)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;然而我们并不知道密码是啥，这时可以用 stegdetect 下的 stegbreak 字典破解，同样图片和 stegbreak.exe 在同一目录下，命令破解密码&lt;/p&gt;
+&lt;p&gt;.\stegbreak -r rules.ini -f password.txt -r p hide.jpg&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;a href=&#34;https://postimg.cc/S2k5Wt73&#34;&gt;&lt;img data-src=&#34;https://i.postimg.cc/QtT3Z2B8/QQ-20240219133158.png&#34; alt=&#34;QQ-20240219133158.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;
-4. 这里我不知道为什么没有爆破出来，因为密码就是 123456&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://postimg.cc/S2k5Wt73&#34;&gt;&lt;img data-src=&#34;https://i.postimg.cc/QtT3Z2B8/QQ-20240219133158.png&#34; alt=&#34;QQ-20240219133158.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;这里我不知道为什么没有爆破出来，因为密码就是 123456&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Linux 下使用指令：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;steghide extract -sf secret.jpg -xf extracted -p 123456
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;压缩包是直接出现在所打开终端的位置，里面有一张图片。&lt;br /&gt;
+&lt;a href=&#34;https://postimg.cc/dk7trCXy&#34;&gt;&lt;img data-src=&#34;https://i.postimg.cc/Qtm9LkJ0/exa.png&#34; alt=&#34;exa.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;看到这图片我也是麻了，🐎玩意儿啊... 还好之前关注了一下这个游戏，知道明日方舟那边的尿性，结合出题人提示是官方的游戏语言，就去游戏官网找。&lt;br /&gt;
+5. 图⽚上的东西根据官⽹找到的字体⽂件⼀个⼀个对着看就⾏&lt;/p&gt;
+&lt;p&gt;官⽹找到字体⽂件的⽅法如下：&lt;br /&gt;
+&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9nLm5nYS5jbi9yZWFkLnBocD90aWQ9MzkxMDk4NTEmYW1wO3JhbmQ9OTk=&#34;&gt;https://g.nga.cn/read.php?tid=39109851&amp;amp;rand=99&lt;/span&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;当然⽹上也有相关的项⽬，不过以官⽹的为准&lt;br /&gt;
+&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9teTFsLmdpdGh1Yi5pby9DdHJsL0N0cmxBc3RyLmh0bWw=&#34;&gt; https://my1l.github.io/Ctrl/CtrlAstr.html&lt;/span&gt;&lt;br /&gt;
+Ctrl Astr 3.14&lt;br /&gt;
+CTRL ExAStRIs ‘SEGELMICHZURSONNE’? allindo WDTH 字宽 BLUR 朦胧 VERT 竖排 HORZ 横排 视频介绍・skill 字体下载・&lt;br /&gt;
+Fonts 笔画 ㇀㇁㇂㇃㇄㇅㇆㇇㇈㇉㇊㇋㇌㇍㇎㇏㇐㇑㇒㇓㇔㇕㇖㇗㇘㇙㇚㇛㇜㇝㇞㇟㇠㇡㇢㇣・  未知 ©ª«¯°…&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;提供的那个网页小工具是为了检验，反正最后是一个一个对出来的 &amp;gt;w&amp;lt;&lt;/li&gt;
+&lt;/ol&gt;
  ]]></description>
         </item>
         <item>
