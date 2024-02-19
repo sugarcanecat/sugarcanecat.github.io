@@ -54,6 +54,28 @@
 &lt;p&gt;&lt;a href=&#34;https://postimg.cc/TLmK9WHF&#34;&gt;&lt;img data-src=&#34;https://i.postimg.cc/gJt3GVyz/QQ-20240216203914.png&#34; alt=&#34;QQ-20240216203914.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;不过官方 wp 给的是修复图片的宽高来看到可爱的希儿小姐，然后拖到 stegsolve 里面去看 LSB。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://postimg.cc/XpngrVr4&#34;&gt;&lt;img data-src=&#34;https://i.postimg.cc/VLCZHv1r/xier.png&#34; alt=&#34;xier.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;来自星尘&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#来自星尘&#34;&gt;#&lt;/a&gt; 来自星尘&lt;/h2&gt;
+&lt;p&gt;一个即将发售的游戏的主角薇 ^3 带来了一条消息。这段消息隐藏在加密的图片里&lt;br /&gt;
+但即使解开了图片的六位弱加密，看到的也是一张迷惑的图片。&lt;br /&gt;
+也许游戏的官网上有这种文字的记录？&lt;/p&gt;
+&lt;p&gt;这一题出题人二刺猿浓度还挺高的哈～刚宣布公测就拿来出题了，不过这提示给了和没给一样...&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://postimg.cc/YLfYHvBv&#34;&gt;&lt;img data-src=&#34;https://i.postimg.cc/QCvbc76J/secret.jpg&#34; alt=&#34;secret.jpg&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;先拿工具试了一通没搞出什么名堂，JPG 图片嘛，后来搜索引擎又搜烂了找到个工具 ——stegdetect&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;使用方法：&lt;/p&gt;
+&lt;p&gt;将图片复制到 stegdetect.exe 所在目录下，右键 PowerShell 命令&lt;br /&gt;
+.\stegdetect.exe -tjopi -s 10.0 hide.jpg&lt;br /&gt;
+ 检测该图片用的是哪种加密方式&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://postimg.cc/bG4L3SRb&#34;&gt;&lt;img data-src=&#34;https://i.postimg.cc/3Rx6rg4L/QQ-20240219132025.png&#34; alt=&#34;QQ-20240219132025.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;
+2. 发现是 jphide 加密 (这里的 * 表示概率程度，很有可能是这种加密，但也有可能不是的意思)&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;然而我们并不知道密码是啥，这时可以用 stegdetect 下的 stegbreak 字典破解，同样图片和 stegbreak.exe 在同一目录下，命令&lt;br /&gt;
+.\stegbreak -r rules.ini -f password.txt -r p hide.jpg&lt;br /&gt;
+ 破解密码&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;a href=&#34;https://postimg.cc/S2k5Wt73&#34;&gt;&lt;img data-src=&#34;https://i.postimg.cc/QtT3Z2B8/QQ-20240219133158.png&#34; alt=&#34;QQ-20240219133158.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;
+4. 这里我不知道为什么没有爆破出来，因为密码就是 123456&lt;/p&gt;
  ]]></description>
         </item>
         <item>
