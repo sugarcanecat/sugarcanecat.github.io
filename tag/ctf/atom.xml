@@ -3,9 +3,85 @@
     <id>http://example.com</id>
     <title>Sugarcane • Posts by &#34;ctf&#34; tag</title>
     <link href="http://example.com" />
-    <updated>2024-02-16T11:21:20.631Z</updated>
+    <updated>2024-02-20T04:44:26.091Z</updated>
     <category term="Web" />
     <category term="CTF" />
+    <entry>
+        <id>http://example.com/2024/02/20/hgame2024-hgame2024-week2/</id>
+        <title>hgame2024-week2</title>
+        <link rel="alternate" href="http://example.com/2024/02/20/hgame2024-hgame2024-week2/"/>
+        <content type="html">&lt;h1 id=&#34;misc&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#misc&#34;&gt;#&lt;/a&gt; Misc&lt;/h1&gt;
+&lt;h2 id=&#34;ek1ng_want_girlfriend&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#ek1ng_want_girlfriend&#34;&gt;#&lt;/a&gt; ek1ng_want_girlfriend&lt;/h2&gt;
+&lt;p&gt;wireshark 打开附件，点击 ⽂件 - 导出对象 - HTTP 即可导出⼀张图⽚，flag 在图⽚上&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://postimg.cc/yDfQp3z7&#34;&gt;&lt;img data-src=&#34;https://i.postimg.cc/xdQwCLxN/QQ-20240220131726.png&#34; alt=&#34;QQ-20240220131726.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://postimg.cc/GBHMW3cG&#34;&gt;&lt;img data-src=&#34;https://i.postimg.cc/VNF3b5pG/QQ-20240220131820.png&#34; alt=&#34;QQ-20240220131820.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://postimg.cc/yJtfsqd5&#34;&gt;&lt;img data-src=&#34;https://i.postimg.cc/ZRKXP4hT/ek1ng.jpg&#34; alt=&#34;ek1ng.jpg&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;ezword&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#ezword&#34;&gt;#&lt;/a&gt; ezWord&lt;/h2&gt;
+&lt;p&gt;这一题是俺们滴 Miku 小姐，来了啊～叔叔的本命（可惜没捣鼓出来 0.o&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;题目给的是一个 word 文件，一般都是改后缀成压缩包，当时先是改成 txt 看到了 PK 打头知道是压缩包了。&lt;br /&gt;
+&lt;a href=&#34;https://postimg.cc/hzWg3598&#34;&gt;&lt;img data-src=&#34;https://i.postimg.cc/zB3B3mvQ/QQ-20240220132516.png&#34; alt=&#34;QQ-20240220132516.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;给的两张图片我还以为又是什么隐写，又是 stegsolve 和 010Editor 搞一出毛用都没，后来出题人说是盲注，也算是 Get 新知识了。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;这里又学到一个新工具 ————BlindWaterMark-master&lt;/p&gt;
+&lt;p&gt;Windows 下即可 (这里注意要用到 2 张图片，一张原图，一张盲注后的图片)：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;python bwmforpy3.py decode 100191209_p0.jpg image1.png wm_from_hui.png
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;这里 wm_from_hui.png 即是注入的图片，拿到压缩包的密码&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://postimg.cc/mzxxLp2d&#34;&gt;&lt;img data-src=&#34;https://i.postimg.cc/fLyMv64h/wm-from-hui.png&#34; alt=&#34;wm-from-hui.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;拿 spam mimic decode 那堆英⽂，这里搜索引擎搜一下找到相关的就能明白。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://postimg.cc/WFd53C7B&#34;&gt;&lt;img data-src=&#34;https://i.postimg.cc/0QfFtqKy/QQ-20240220134644.png&#34; alt=&#34;QQ-20240220134644.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://postimg.cc/Vr2DbgGd&#34;&gt;&lt;img data-src=&#34;https://i.postimg.cc/hvtw63Vb/QQ-20240220135114.png&#34; alt=&#34;QQ-20240220135114.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuc3BhbW1pbWljLmNvbS9kZWNvZGUuc2h0bWw=&#34;&gt;https://www.spammimic.com/decode.shtml&lt;/span&gt;&lt;br /&gt;
+ 这个就是一个解那串英文的 Web 工具&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;解出来还是一堆奇奇怪怪的东西，这里是真得用 Python 工具了，到这里已经在我目前的能力范围之外了，看出题人给的 wp 怎么解。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://postimg.cc/V0kR0T19&#34;&gt;&lt;img data-src=&#34;https://i.postimg.cc/brQFWcB5/QQ-20240220135455.png&#34; alt=&#34;QQ-20240220135455.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;之舞&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#之舞&#34;&gt;#&lt;/a&gt; ⻰之舞&lt;/h2&gt;
+&lt;p&gt;这是下载得到的⾳频 deepsound_of_dragon_dance.wav&lt;br /&gt;
+ 前⼏秒明显有杂⾳，于是拿 audacity 看⼀下频谱图&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://postimg.cc/kRJ4STqq&#34;&gt;&lt;img data-src=&#34;https://i.postimg.cc/gjR6f77X/QQ-20240220141634.png&#34; alt=&#34;QQ-20240220141634.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;KEY 为 5H8w1nlWCX3hQLG&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://postimg.cc/JD4VcvD6&#34;&gt;&lt;img data-src=&#34;https://i.postimg.cc/wvDqHd6p/QQ-20240220141652.png&#34; alt=&#34;QQ-20240220141652.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;拿 deepsound 提取⽂件 (又是一个新工具)&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://postimg.cc/1nsn0GQR&#34;&gt;&lt;img data-src=&#34;https://i.postimg.cc/Hx7wgzvM/QQ-20240220141908.png&#34; alt=&#34;QQ-20240220141908.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://postimg.cc/WDMqJ9xf&#34;&gt;&lt;img data-src=&#34;https://i.postimg.cc/q7FsSSw0/QQ-20240220141924.png&#34; alt=&#34;QQ-20240220141924.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;获得⼀个压缩包&lt;/p&gt;
+&lt;p&gt;解压获得这张 gif&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://postimg.cc/0M1SrgQ4&#34;&gt;&lt;img data-src=&#34;https://i.postimg.cc/KzRDqxym/QQ-20240220142046.png&#34; alt=&#34;QQ-20240220142046.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;获得四张⼆维码&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://postimg.cc/NyHTgGgT&#34;&gt;&lt;img data-src=&#34;https://i.postimg.cc/hGC01h6C/QQ-20240220142123.png&#34; alt=&#34;QQ-20240220142123.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;⼿动拼⼀下，能获得⼀张这样的⼆维码&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://postimg.cc/k6hv410R&#34;&gt;&lt;img data-src=&#34;https://i.postimg.cc/hvKy2NMs/QQ-20240220142224.png&#34; alt=&#34;QQ-20240220142224.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;这里的二维码还需要另一个工具 ————qrazybox 修复&lt;br /&gt;
+&lt;a href=&#34;https://postimg.cc/FdZ3dPwV&#34;&gt;&lt;img data-src=&#34;https://i.postimg.cc/0jgf4FfF/QQ-20240220142333.png&#34; alt=&#34;QQ-20240220142333.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;点击 &lt;code&gt;Tools&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://postimg.cc/CdcbwQGF&#34;&gt;&lt;img data-src=&#34;https://i.postimg.cc/65XcfsTG/QQ-20240220142342.png&#34; alt=&#34;QQ-20240220142342.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;点击选中的部分，然后点 &lt;code&gt;close&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://postimg.cc/3W8g5TDS&#34;&gt;&lt;img data-src=&#34;https://i.postimg.cc/Y2g8F22H/QQ-20240220142357.png&#34; alt=&#34;QQ-20240220142357.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;点⼀下 &lt;code&gt;Editor Mode&lt;/code&gt;  切换到 &lt;code&gt;Decode Mode&lt;/code&gt; &lt;br /&gt;
+ 点⼀下 &lt;code&gt;decode&lt;/code&gt;  按钮，就弹出了 flag&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://postimg.cc/p5L8DfHb&#34;&gt;&lt;img data-src=&#34;https://i.postimg.cc/zvnjY72B/QQ-20240220142410.png&#34; alt=&#34;QQ-20240220142410.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;qrazybox 网址：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9tZXJyaS5jeC9xcmF6eWJveC8=&#34;&gt;https://merri.cx/qrazybox/&lt;/span&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+        <category term="CTF" />
+        <updated>2024-02-20T04:44:26.091Z</updated>
+    </entry>
     <entry>
         <id>http://example.com/2024/02/16/hgame2024-hgame2024-week1/</id>
         <title>hgame2024-week1</title>
@@ -61,13 +137,14 @@
 &lt;p&gt;这一题出题人二刺猿浓度还挺高的哈～刚宣布公测就拿来出题了，不过这提示给了和没给一样...&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://postimg.cc/YLfYHvBv&#34;&gt;&lt;img data-src=&#34;https://i.postimg.cc/QCvbc76J/secret.jpg&#34; alt=&#34;secret.jpg&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;先拿工具试了一通没搞出什么名堂，JPG 图片嘛，后来搜索引擎又搜烂了找到个工具 ——stegdetect&lt;/li&gt;
-&lt;/ol&gt;
+&lt;li&gt;
+&lt;p&gt;先拿工具试了一通没搞出什么名堂，JPG 图片嘛，后来搜索引擎又搜烂了找到个工具 ——stegdetect&lt;/p&gt;
 &lt;p&gt;使用方法：&lt;/p&gt;
-&lt;p&gt;将图片复制到 stegdetect.exe 所在目录下，右键 PowerShell 命令&lt;/p&gt;
+&lt;p&gt;将图片复制到 stegdetect.exe 所在目录下，右键 PowerShell 命令检测该图片用的是哪种加密方式&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;.\stegdetect.exe -tjopi -s 10.0 hide.jpg
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;检测该图片用的是哪种加密方式&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
 &lt;p&gt;&lt;a href=&#34;https://postimg.cc/bG4L3SRb&#34;&gt;&lt;img data-src=&#34;https://i.postimg.cc/3Rx6rg4L/QQ-20240219132025.png&#34; alt=&#34;QQ-20240219132025.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;ol start=&#34;2&#34;&gt;
 &lt;li&gt;
@@ -80,15 +157,17 @@
 &lt;/ol&gt;
 &lt;p&gt;&lt;a href=&#34;https://postimg.cc/S2k5Wt73&#34;&gt;&lt;img data-src=&#34;https://i.postimg.cc/QtT3Z2B8/QQ-20240219133158.png&#34; alt=&#34;QQ-20240219133158.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;ol start=&#34;4&#34;&gt;
-&lt;li&gt;这里我不知道为什么没有爆破出来，因为密码就是 123456&lt;/li&gt;
-&lt;/ol&gt;
+&lt;li&gt;
+&lt;p&gt;这里我不知道为什么没有爆破出来，因为密码就是 123456&lt;/p&gt;
 &lt;p&gt;Linux 下使用指令：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;steghide extract -sf secret.jpg -xf extracted -p 123456
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;压缩包是直接出现在所打开终端的位置，里面有一张图片。&lt;br /&gt;
-&lt;a href=&#34;https://postimg.cc/dk7trCXy&#34;&gt;&lt;img data-src=&#34;https://i.postimg.cc/Qtm9LkJ0/exa.png&#34; alt=&#34;exa.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;看到这图片我也是麻了，🐎玩意儿啊... 还好之前关注了一下这个游戏，知道明日方舟那边的尿性，结合出题人提示是官方的游戏语言，就去游戏官网找。&lt;br /&gt;
-5. 图⽚上的东西根据官⽹找到的字体⽂件⼀个⼀个对着看就⾏&lt;/p&gt;
+&lt;p&gt;压缩包是直接出现在所打开终端的位置，里面有一张图片。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://postimg.cc/dk7trCXy&#34;&gt;&lt;img data-src=&#34;https://i.postimg.cc/Qtm9LkJ0/exa.png&#34; alt=&#34;exa.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;看到这图片我也是麻了，🐎玩意儿啊... 还好之前关注了一下这个游戏，知道明日方舟那边的尿性，结合出题人提示是官方的游戏语言，就去游戏官网找。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;图⽚上的东西根据官⽹找到的字体⽂件⼀个⼀个对着看就⾏&lt;/p&gt;
 &lt;p&gt;官⽹找到字体⽂件的⽅法如下：&lt;br /&gt;
 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9nLm5nYS5jbi9yZWFkLnBocD90aWQ9MzkxMDk4NTEmYW1wO3JhbmQ9OTk=&#34;&gt;https://g.nga.cn/read.php?tid=39109851&amp;amp;rand=99&lt;/span&gt;&lt;/p&gt;
 &lt;blockquote&gt;
@@ -98,8 +177,10 @@ Ctrl Astr 3.14&lt;br /&gt;
 CTRL ExAStRIs ‘SEGELMICHZURSONNE’? allindo WDTH 字宽 BLUR 朦胧 VERT 竖排 HORZ 横排 视频介绍・skill 字体下载・&lt;br /&gt;
 Fonts 笔画 ㇀㇁㇂㇃㇄㇅㇆㇇㇈㇉㇊㇋㇌㇍㇎㇏㇐㇑㇒㇓㇔㇕㇖㇗㇘㇙㇚㇛㇜㇝㇞㇟㇠㇡㇢㇣・  未知 ©ª«¯°…&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;ol start=&#34;6&#34;&gt;
-&lt;li&gt;提供的那个网页小工具是为了检验，反正最后是一个一个对出来的 &amp;gt;w&amp;lt;&lt;/li&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;提供的那个网页小工具是为了检验，反正最后是一个一个对出来的 &amp;gt;w&amp;lt;&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ol&gt;
 </content>
         <category term="CTF" />
