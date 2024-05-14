@@ -68,6 +68,21 @@
 这里结果反倒最底部，可以看到是一个 “Microsoft Excel 2003” 字样，可以确定里面有一个 Excel 文件，可以直接用厨子导出。&lt;br /&gt;
 &lt;a href=&#34;https://postimg.cc/XXFKVzTT&#34;&gt;&lt;img data-src=&#34;https://i.postimg.cc/66bMhsz5/QQ-20240513210013.png&#34; alt=&#34;QQ-20240513210013.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;导出后，Excel 打开后显示的是如下&lt;br /&gt;
+&lt;a href=&#34;https://postimg.cc/jCTCPPgg&#34;&gt;&lt;img data-src=&#34;https://i.postimg.cc/MZMRkYyS/2024-05-14-105019.png&#34; alt=&#34;2024-05-14-105019.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;这里就是看如何分析文档的宏代码了，这里是用到一个工具来实现 ———— &lt;code&gt;oletools&lt;/code&gt; &lt;br /&gt;
+&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2RlY2FsYWdlMi9vbGV0b29scw==&#34;&gt;https://github.com/decalage2/oletools&lt;/span&gt; 来提取&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;pip3 install oletools&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;olevba ctf.xls&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;这里注意一定要按照步骤来，只下载 GitHub 的压缩包并没有成功的安装，可能会出现命令实现不了的情况。&lt;br /&gt;
+&lt;a href=&#34;https://postimg.cc/XrDt6RDZ&#34;&gt;&lt;img data-src=&#34;https://i.postimg.cc/1z9SwPGK/QQ-20240513210654.png&#34; alt=&#34;QQ-20240513210654.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;
+ 可以拿到 &lt;code&gt;6c666b6d713f333f323c383a6b6c6f3e693f3c6f683b396f326c6e683f6f3b3a6e3e6c3d3977&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;最后还是拿厨子来解，用 XOR Brute Force 模块来解密，发现再次异或 0a 即可得到 flag&lt;br /&gt;
+&lt;a href=&#34;https://postimg.cc/qNSwB4c3&#34;&gt;&lt;img data-src=&#34;https://i.postimg.cc/Xv7z8vpQ/QQ-20240513210013.png&#34; alt=&#34;QQ-20240513210013.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ol&gt;
 </content>
         <category term="CTF" />
