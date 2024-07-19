@@ -10,9 +10,9 @@
     </author>
     <updated>2024-07-19T13:26:15.215Z</updated>
     <entry>
-        <id>http://example.com/2024/07/19/hgame/hgame2024-week2/</id>
-        <title>hgame-week2</title>
-        <link rel="alternate" href="http://example.com/2024/07/19/hgame/hgame2024-week2/"/>
+        <id>http://example.com/2024/07/19/hgame%E6%AF%94%E8%B5%9B/hgame2024-week2/</id>
+        <title>hgame比赛-week2</title>
+        <link rel="alternate" href="http://example.com/2024/07/19/hgame%E6%AF%94%E8%B5%9B/hgame2024-week2/"/>
         <content type="html">&lt;h1 id=&#34;misc&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#misc&#34;&gt;#&lt;/a&gt; Misc&lt;/h1&gt;
 &lt;h2 id=&#34;ek1ng_want_girlfriend&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#ek1ng_want_girlfriend&#34;&gt;#&lt;/a&gt; ek1ng_want_girlfriend&lt;/h2&gt;
 &lt;p&gt;wireshark 打开附件，点击 ⽂件 - 导出对象 - HTTP 即可导出⼀张图⽚，flag 在图⽚上&lt;/p&gt;
@@ -87,9 +87,9 @@
         <updated>2024-07-19T13:26:15.215Z</updated>
     </entry>
     <entry>
-        <id>http://example.com/2024/07/19/hgame/hgame2024-week1/</id>
-        <title>hgame-week1</title>
-        <link rel="alternate" href="http://example.com/2024/07/19/hgame/hgame2024-week1/"/>
+        <id>http://example.com/2024/07/19/hgame%E6%AF%94%E8%B5%9B/hgame2024-week1/</id>
+        <title>hgame比赛-week1</title>
+        <link rel="alternate" href="http://example.com/2024/07/19/hgame%E6%AF%94%E8%B5%9B/hgame2024-week1/"/>
         <content type="html">&lt;h1 id=&#34;misc&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#misc&#34;&gt;#&lt;/a&gt; Misc&lt;/h1&gt;
 &lt;p&gt;介于当时只练习了 Misc 类的题目，本次的 hgame 只做了 Misc 的题目（虽然也没有全部做出来）&lt;/p&gt;
 &lt;h2 id=&#34;signin&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#signin&#34;&gt;#&lt;/a&gt; SignIn&lt;/h2&gt;
