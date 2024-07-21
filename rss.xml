@@ -2,21 +2,22 @@
 <rss version="2.0">
     <channel>
         <title>Sugarcane</title>
+        <subtitle></subtitle>
+        <icon>http://example.com/assets/favicon.ico</icon>
         <link>http://example.com</link>
+        <author>
+          <name>甘蔗</name>
+        </author>
         <description></description>
-        <language>zh-cn</language>
+        <language>zh-CN</language>
         <pubDate>Fri, 19 Jul 2024 21:26:15 +0800</pubDate>
         <lastBuildDate>Fri, 19 Jul 2024 21:26:15 +0800</lastBuildDate>
-        <category>CTF</category>
-        <category>GitHub</category>
-        <category>ACG</category>
-        <category>Web</category>
-        <category>Sui</category>
         <item>
             <guid isPermalink="true">http://example.com/2024/07/19/hgame%E6%AF%94%E8%B5%9B/hgame2024-week2/</guid>
             <title>hgame比赛-week2</title>
             <link>http://example.com/2024/07/19/hgame%E6%AF%94%E8%B5%9B/hgame2024-week2/</link>
-            <category>CTF</category>
+            <category term="hgame比赛" scheme="http://example.com/categories/hgame%E6%AF%94%E8%B5%9B/" />
+            <category term="CTF" scheme="http://example.com/tags/CTF/" />
             <pubDate>Fri, 19 Jul 2024 21:26:15 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;misc&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#misc&#34;&gt;#&lt;/a&gt; Misc&lt;/h1&gt;
 &lt;h2 id=&#34;ek1ng_want_girlfriend&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#ek1ng_want_girlfriend&#34;&gt;#&lt;/a&gt; ek1ng_want_girlfriend&lt;/h2&gt;
@@ -92,7 +93,8 @@
             <guid isPermalink="true">http://example.com/2024/07/19/hgame%E6%AF%94%E8%B5%9B/hgame2024-week1/</guid>
             <title>hgame比赛-week1</title>
             <link>http://example.com/2024/07/19/hgame%E6%AF%94%E8%B5%9B/hgame2024-week1/</link>
-            <category>CTF</category>
+            <category term="hgame比赛" scheme="http://example.com/categories/hgame%E6%AF%94%E8%B5%9B/" />
+            <category term="CTF" scheme="http://example.com/tags/CTF/" />
             <pubDate>Fri, 19 Jul 2024 21:26:15 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;misc&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#misc&#34;&gt;#&lt;/a&gt; Misc&lt;/h1&gt;
 &lt;p&gt;介于当时只练习了 Misc 类的题目，本次的 hgame 只做了 Misc 的题目（虽然也没有全部做出来）&lt;/p&gt;
@@ -196,7 +198,8 @@ Fonts 笔画 ㇀㇁㇂㇃㇄㇅㇆㇇㇈㇉㇊㇋㇌㇍㇎㇏㇐㇑㇒㇓㇔㇕�
             <guid isPermalink="true">http://example.com/2024/07/14/Sui%E5%AD%A6%E4%B9%A0/GitHub%E6%8F%90%E4%BA%A4PR/</guid>
             <title>GitHub提交PR</title>
             <link>http://example.com/2024/07/14/Sui%E5%AD%A6%E4%B9%A0/GitHub%E6%8F%90%E4%BA%A4PR/</link>
-            <category>GitHub</category>
+            <category term="Sui学习" scheme="http://example.com/categories/Sui%E5%AD%A6%E4%B9%A0/" />
+            <category term="GitHub" scheme="http://example.com/tags/GitHub/" />
             <pubDate>Sun, 14 Jul 2024 00:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;用git实现github的pull-requests提交&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#用git实现github的pull-requests提交&#34;&gt;#&lt;/a&gt; 用 GIt 实现 GitHub 的 Pull requests 提交&lt;/h1&gt;
 &lt;p&gt;参考作者：&lt;a href=&#34;https://blog.csdn.net/not_found77/article/details/139867915&#34;&gt;Elemen_7&lt;/a&gt;&lt;/p&gt;
@@ -274,7 +277,8 @@ Fonts 笔画 ㇀㇁㇂㇃㇄㇅㇆㇇㇈㇉㇊㇋㇌㇍㇎㇏㇐㇑㇒㇓㇔㇕�
             <guid isPermalink="true">http://example.com/2024/07/13/Sui%E5%AD%A6%E4%B9%A0/letsmove/</guid>
             <title>letsmove-task1</title>
             <link>http://example.com/2024/07/13/Sui%E5%AD%A6%E4%B9%A0/letsmove/</link>
-            <category>Sui</category>
+            <category term="Sui学习" scheme="http://example.com/categories/Sui%E5%AD%A6%E4%B9%A0/" />
+            <category term="Sui" scheme="http://example.com/tags/Sui/" />
             <pubDate>Sat, 13 Jul 2024 00:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;letsmove-task1&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#letsmove-task1&#34;&gt;#&lt;/a&gt; letsmove-task1&lt;/h1&gt;
 &lt;p&gt;记录 GitHub 上《letsmove》项目的学习经历&lt;br /&gt;
@@ -431,7 +435,8 @@ Caused by:
             <guid isPermalink="true">http://example.com/2024/06/29/%E6%88%91%E6%89%80%E7%83%AD%E7%88%B1%E7%9A%84/GBC-%E4%B8%80%E6%AC%A1%E9%9A%BE%E5%BF%98%E7%9A%84%E8%BF%BD%E7%95%AA%E7%BB%8F%E5%8E%86/</guid>
             <title>GIRLS BAND CRY</title>
             <link>http://example.com/2024/06/29/%E6%88%91%E6%89%80%E7%83%AD%E7%88%B1%E7%9A%84/GBC-%E4%B8%80%E6%AC%A1%E9%9A%BE%E5%BF%98%E7%9A%84%E8%BF%BD%E7%95%AA%E7%BB%8F%E5%8E%86/</link>
-            <category>ACG</category>
+            <category term="我所热爱的" scheme="http://example.com/categories/%E6%88%91%E6%89%80%E7%83%AD%E7%88%B1%E7%9A%84/" />
+            <category term="ACG" scheme="http://example.com/tags/ACG/" />
             <pubDate>Sat, 29 Jun 2024 00:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;girls-band-cry&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#girls-band-cry&#34;&gt;#&lt;/a&gt; GIRLS BAND CRY&lt;/h1&gt;
 &lt;h2 id=&#34;愤怒也好喜悦也好悲伤也好把一切都倾注进去&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#愤怒也好喜悦也好悲伤也好把一切都倾注进去&#34;&gt;#&lt;/a&gt; 「愤怒也好喜悦也好悲伤也好，把一切都倾注进去！」&lt;/h2&gt;
@@ -441,7 +446,8 @@ Caused by:
             <guid isPermalink="true">http://example.com/2024/04/03/%E7%BA%A2%E6%98%8E%E8%B0%B7%E6%9D%AF/%E7%BA%A2%E6%98%8E%E8%B0%B7%E6%9D%AF-2024/</guid>
             <title>2024红明谷杯</title>
             <link>http://example.com/2024/04/03/%E7%BA%A2%E6%98%8E%E8%B0%B7%E6%9D%AF/%E7%BA%A2%E6%98%8E%E8%B0%B7%E6%9D%AF-2024/</link>
-            <category>CTF</category>
+            <category term="红明谷杯" scheme="http://example.com/categories/%E7%BA%A2%E6%98%8E%E8%B0%B7%E6%9D%AF/" />
+            <category term="CTF" scheme="http://example.com/tags/CTF/" />
             <pubDate>Wed, 03 Apr 2024 00:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;misc加密的流量&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#misc加密的流量&#34;&gt;#&lt;/a&gt; Misc— 加密的流量&lt;/h1&gt;
 &lt;h2 id=&#34;签到题&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#签到题&#34;&gt;#&lt;/a&gt; 签到题&lt;/h2&gt;
@@ -523,7 +529,8 @@ Caused by:
             <guid isPermalink="true">http://example.com/2023/11/06/Web/%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1%E5%9F%B9%E8%AE%AD/</guid>
             <title>记录一次培训</title>
             <link>http://example.com/2023/11/06/Web/%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1%E5%9F%B9%E8%AE%AD/</link>
-            <category>Web</category>
+            <category term="网络安全" scheme="http://example.com/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" />
+            <category term="Web" scheme="http://example.com/tags/Web/" />
             <pubDate>Mon, 06 Nov 2023 00:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;&lt;strong&gt;Hacker&lt;/strong&gt;&lt;br /&gt;
 1. 植入后门&lt;br /&gt;
