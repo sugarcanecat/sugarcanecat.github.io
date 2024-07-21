@@ -1,0 +1,18 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Sugarcane • All posts by \"github\" tag",
+    "description": "",
+    "home_page_url": "http://example.com",
+    "items": [
+        {
+            "id": "http://example.com/2024/07/14/Sui%E5%AD%A6%E4%B9%A0/GitHub%E6%8F%90%E4%BA%A4PR/",
+            "url": "http://example.com/2024/07/14/Sui%E5%AD%A6%E4%B9%A0/GitHub%E6%8F%90%E4%BA%A4PR/",
+            "title": "GitHub提交PR",
+            "date_published": "2024-07-13T16:00:00.000Z",
+            "content_html": "<h1 id=\"用git实现github的pull-requests提交\"><a class=\"anchor\" href=\"#用git实现github的pull-requests提交\">#</a> 用 GIt 实现 GitHub 的 Pull requests 提交</h1>\n<p>参考作者：<a href=\"https://blog.csdn.net/not_found77/article/details/139867915\">Elemen_7</a></p>\n<h2 id=\"安装git工具\"><a class=\"anchor\" href=\"#安装git工具\">#</a> 安装 Git 工具</h2>\n<p>这一步有很多教程，百度一下即可。</p>\n<h2 id=\"开始\"><a class=\"anchor\" href=\"#开始\">#</a> 开始</h2>\n<ol>\n<li>fork 目标仓库到自己的仓库地址中，其他默认点击<strong> creat</strong> 即可<br />\n<a href=\"https://postimg.cc/Mvg2ZsR0\"><img loading=\"lazy\" data-src=\"https://i.postimg.cc/Z55Tc25Q/01.png\" alt=\"01.png\" /></a><br />\n<a href=\"https://postimg.cc/BtYfkZnV\"><img loading=\"lazy\" data-src=\"https://i.postimg.cc/Ghr3BHwd/02.png\" alt=\"02.png\" /></a></li>\n</ol>\n<h2 id=\"复制远程仓库地址到本地文件夹中\"><a class=\"anchor\" href=\"#复制远程仓库地址到本地文件夹中\">#</a> 复制远程仓库地址到本地文件夹中</h2>\n<ol>\n<li>\n<p>复制仓库地址，即 fork 后自己的仓库的项目地址<br />\n<a href=\"https://postimg.cc/w71YpKtT\"><img loading=\"lazy\" data-src=\"https://i.postimg.cc/kXcJWqq8/03.png\" alt=\"03.png\" /></a></p>\n</li>\n<li>\n<p>随后在本地任意文件夹 (最好空白文件夹) 中，按住键盘<strong> SHIFT + 右键</strong>，选择如图所示<br />\n<a href=\"https://postimg.cc/GT2wtVqK\"><img loading=\"lazy\" data-src=\"https://i.postimg.cc/7h1xsyzF/04.png\" alt=\"04.png\" /></a></p>\n</li>\n<li>\n<p>在打开的 git bash 中输入：</p>\n<p><code>git clone （刚刚复制的仓库地址）</code></p>\n</li>\n<li>\n<p>这个时候你本地会出现一个同名文件夹，这就是克隆成功了 <strong>ps: 这一步可能对网络要求较高，建议开启代理。</strong></p>\n</li>\n</ol>\n<h2 id=\"选择多线程工作需要创造分支\"><a class=\"anchor\" href=\"#选择多线程工作需要创造分支\">#</a> 选择多线程工作，需要创造分支</h2>\n<ol>\n<li>\n<p>创建分支</p>\n<p><code>git checkout -b 分支名</code></p>\n</li>\n<li>\n<p>删除分支，先切换到非删除分支，再进行删除操作</p>\n<p><code>git branch -d 删除的分支名</code></p>\n</li>\n<li>\n<p>查看所有分支<br />\n <code>git branch -a</code></p>\n<p><a href=\"https://postimg.cc/pyXts5Rj\"><img loading=\"lazy\" data-src=\"https://i.postimg.cc/T2nYYnst/05.png\" alt=\"05.png\" /></a></p>\n</li>\n</ol>\n<h2 id=\"推送分支到远程仓库\"><a class=\"anchor\" href=\"#推送分支到远程仓库\">#</a> 推送分支到远程仓库</h2>\n<ol>\n<li>\n<p>将修改文件加入缓存区</p>\n<p><code>git add 需要推送的文件</code></p>\n</li>\n<li>\n<p>提交<br />\n <code>git commit -m&quot;修改信息&quot;</code></p>\n</li>\n<li>\n<p>推送<br />\n <code>git push --set-upstream origin 分支名</code></p>\n</li>\n</ol>\n<h2 id=\"回到github提交pr\"><a class=\"anchor\" href=\"#回到github提交pr\">#</a> 回到 GitHub，提交 PR</h2>\n<ol>\n<li>\n<p>在 GitHub 页面刷新后，将分支切换为刚刚提交的分支，准备创建 PR，如图<br />\n<a href=\"https://postimg.cc/nX78XvYy\"><img loading=\"lazy\" data-src=\"https://i.postimg.cc/YCDtyR4C/06.png\" alt=\"06.png\" /></a><br />\n<a href=\"https://postimg.cc/cKNpwrFr\"><img loading=\"lazy\" data-src=\"https://i.postimg.cc/R03vrtfQ/07.png\" alt=\"07.png\" /></a></p>\n</li>\n<li>\n<p>创建之后，在文件栏填写相应的命名要求即可.</p>\n</li>\n</ol>\n",
+            "tags": [
+                "GitHub"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>Sugarcane • Posts by &#34;github&#34; tag</title>
+        <link>http://example.com</link>
+        <description></description>
+        <language>zh-cn</language>
+        <pubDate>Sun, 14 Jul 2024 00:00:00 +0800</pubDate>
+        <lastBuildDate>Sun, 14 Jul 2024 00:00:00 +0800</lastBuildDate>
+        <category>CTF</category>
+        <category>GitHub</category>
+        <category>ACG</category>
+        <category>Web</category>
+        <category>Sui</category>
+        <item>
+            <guid isPermalink="true">http://example.com/2024/07/14/Sui%E5%AD%A6%E4%B9%A0/GitHub%E6%8F%90%E4%BA%A4PR/</guid>
+            <title>GitHub提交PR</title>
+            <link>http://example.com/2024/07/14/Sui%E5%AD%A6%E4%B9%A0/GitHub%E6%8F%90%E4%BA%A4PR/</link>
+            <category>GitHub</category>
+            <pubDate>Sun, 14 Jul 2024 00:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;用git实现github的pull-requests提交&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#用git实现github的pull-requests提交&#34;&gt;#&lt;/a&gt; 用 GIt 实现 GitHub 的 Pull requests 提交&lt;/h1&gt;
+&lt;p&gt;参考作者：&lt;a href=&#34;https://blog.csdn.net/not_found77/article/details/139867915&#34;&gt;Elemen_7&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;安装git工具&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装git工具&#34;&gt;#&lt;/a&gt; 安装 Git 工具&lt;/h2&gt;
+&lt;p&gt;这一步有很多教程，百度一下即可。&lt;/p&gt;
+&lt;h2 id=&#34;开始&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#开始&#34;&gt;#&lt;/a&gt; 开始&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;fork 目标仓库到自己的仓库地址中，其他默认点击&lt;strong&gt; creat&lt;/strong&gt; 即可&lt;br /&gt;
+&lt;a href=&#34;https://postimg.cc/Mvg2ZsR0&#34;&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://i.postimg.cc/Z55Tc25Q/01.png&#34; alt=&#34;01.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://postimg.cc/BtYfkZnV&#34;&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://i.postimg.cc/Ghr3BHwd/02.png&#34; alt=&#34;02.png&#34; /&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;复制远程仓库地址到本地文件夹中&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#复制远程仓库地址到本地文件夹中&#34;&gt;#&lt;/a&gt; 复制远程仓库地址到本地文件夹中&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;复制仓库地址，即 fork 后自己的仓库的项目地址&lt;br /&gt;
+&lt;a href=&#34;https://postimg.cc/w71YpKtT&#34;&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://i.postimg.cc/kXcJWqq8/03.png&#34; alt=&#34;03.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;随后在本地任意文件夹 (最好空白文件夹) 中，按住键盘&lt;strong&gt; SHIFT + 右键&lt;/strong&gt;，选择如图所示&lt;br /&gt;
+&lt;a href=&#34;https://postimg.cc/GT2wtVqK&#34;&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://i.postimg.cc/7h1xsyzF/04.png&#34; alt=&#34;04.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在打开的 git bash 中输入：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git clone （刚刚复制的仓库地址）&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;这个时候你本地会出现一个同名文件夹，这就是克隆成功了 &lt;strong&gt;ps: 这一步可能对网络要求较高，建议开启代理。&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;选择多线程工作需要创造分支&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#选择多线程工作需要创造分支&#34;&gt;#&lt;/a&gt; 选择多线程工作，需要创造分支&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;创建分支&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git checkout -b 分支名&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;删除分支，先切换到非删除分支，再进行删除操作&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git branch -d 删除的分支名&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;查看所有分支&lt;br /&gt;
+ &lt;code&gt;git branch -a&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://postimg.cc/pyXts5Rj&#34;&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://i.postimg.cc/T2nYYnst/05.png&#34; alt=&#34;05.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;推送分支到远程仓库&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#推送分支到远程仓库&#34;&gt;#&lt;/a&gt; 推送分支到远程仓库&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;将修改文件加入缓存区&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git add 需要推送的文件&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;提交&lt;br /&gt;
+ &lt;code&gt;git commit -m&amp;quot;修改信息&amp;quot;&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;推送&lt;br /&gt;
+ &lt;code&gt;git push --set-upstream origin 分支名&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;回到github提交pr&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#回到github提交pr&#34;&gt;#&lt;/a&gt; 回到 GitHub，提交 PR&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;在 GitHub 页面刷新后，将分支切换为刚刚提交的分支，准备创建 PR，如图&lt;br /&gt;
+&lt;a href=&#34;https://postimg.cc/nX78XvYy&#34;&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://i.postimg.cc/YCDtyR4C/06.png&#34; alt=&#34;06.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://postimg.cc/cKNpwrFr&#34;&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://i.postimg.cc/R03vrtfQ/07.png&#34; alt=&#34;07.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;创建之后，在文件栏填写相应的命名要求即可.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>
