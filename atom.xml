@@ -8,8 +8,60 @@
     <author>
       <name>甘蔗</name>
     </author>
-    <updated>2024-10-22T07:42:49.908Z</updated>
+    <updated>2024-10-22T13:18:32.323Z</updated>
     <category term="Hacker" />
+    <entry>
+        <id>http://example.com/2024/10/22/%E7%BA%BF%E4%B8%8A%E8%B5%9B/BaseCTF/</id>
+        <title>BaseCTF</title>
+        <link rel="alternate" href="http://example.com/2024/10/22/%E7%BA%BF%E4%B8%8A%E8%B5%9B/BaseCTF/"/>
+        <content type="html">&lt;h1 id=&#34;misc&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#misc&#34;&gt;#&lt;/a&gt; MISC&lt;/h1&gt;
+&lt;p&gt;暑假半路打的，本次只记录个人认为需要记录的题目。直接搬的官方的 WP&lt;/p&gt;
+&lt;h2 id=&#34;week1&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#week1&#34;&gt;#&lt;/a&gt; Week1&lt;/h2&gt;
+&lt;h3 id=&#34;正着看还是反着看&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#正着看还是反着看&#34;&gt;#&lt;/a&gt; 正着看还是反着看？&lt;/h3&gt;
+&lt;p&gt;010 &lt;strong&gt;Editor&lt;/strong&gt; 打开，除了 &lt;strong&gt;txt.galf&lt;/strong&gt; 也可以看见末尾明显  &lt;code&gt;JFIF&lt;/code&gt;  特征&lt;/p&gt;
+&lt;p&gt;文件的本质就是一堆字节。像 010 Editor 这样的十六进制编辑器可以查看 / 编辑文件的原始字节流。&lt;/p&gt;
+&lt;p&gt;大部分文件有其固定的文件结构，常见的图片格式如 PNG、JPG 等都是由一系列特定的数据块组成的。在许多非文本文件的开头，都有一片区域来显示这个文件的格式，这就是文件头标志。例如 JPG 开头通常是 ÿØÿà..JFIF 这样的模式，看到这个模式就知道是  &lt;code&gt;JPG&lt;/code&gt;  文件。&lt;br /&gt;
+&lt;a href=&#34;https://postimg.cc/9zmF1fjt&#34;&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://i.postimg.cc/BZDLS8Yy/001.png&#34; alt=&#34;001.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;
+ 将文件上传到 CyberChef，逆序（注意按字节而不是字符），然后下载：&lt;br /&gt;
+&lt;a href=&#34;https://postimg.cc/PC9QzcpY&#34;&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://i.postimg.cc/ZqKsZzJ7/002.png&#34; alt=&#34;002.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;
+ 得到一个文件，使用 010 Editor 的模板功能可以识别出最后有一个未知区域：&lt;br /&gt;
+&lt;a href=&#34;https://postimg.cc/XpvKM399&#34;&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://i.postimg.cc/65rMvp3b/003.png&#34; alt=&#34;003.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;
+PK.. (50 4B 03 04) 则是 ZIP 压缩文件的标志。后面就是搞出来，啥工具都行（binwalk、厨子等都行）&lt;/p&gt;
+&lt;h3 id=&#34;哇珍德食泥鸭&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#哇珍德食泥鸭&#34;&gt;#&lt;/a&gt; 哇！珍德食泥鸭&lt;/h3&gt;
+&lt;p&gt;把 gif 丢到 binwalk 分离&lt;br /&gt;
+&lt;a href=&#34;https://postimg.cc/SXKbCn9J&#34;&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://i.postimg.cc/N06GhTf7/004.png&#34; alt=&#34;004.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;
+ 由于 binwalk 分离后 docx 会还原后缀为 zip&lt;br /&gt;
+&lt;a href=&#34;https://postimg.cc/bsPM1Gcp&#34;&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://i.postimg.cc/GhTCwYX8/005.png&#34; alt=&#34;005.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;
+ 改为 docx 后打开（打开压缩包即可判断是 docx）&lt;br /&gt;
+页面很长 往下翻翻看看？&lt;br /&gt;
+&lt;a href=&#34;https://postimg.cc/K3xN3MKW&#34;&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://i.postimg.cc/rstYbGqq/006.png&#34; alt=&#34;006.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;
+ 最下面有一张白色图片做遮挡（通过图片方式是悬浮文字上方判断）&lt;br /&gt;
+移开后没发现任何东西？打开显示隐藏文字&lt;br /&gt;
+&lt;a href=&#34;https://postimg.cc/PPq7SgxR&#34;&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://i.postimg.cc/vH7dZMdb/007.png&#34; alt=&#34;007.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;
+ 可以看出来这里是有东西的，全选 把文字颜色改成其他颜色即可拿到 flag&lt;br /&gt;
+&lt;a href=&#34;https://postimg.cc/m1k01J1J&#34;&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://i.postimg.cc/90YVKjmm/008.png&#34; alt=&#34;008.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;
+ 其实也可以  &lt;code&gt;Ctrl+F&lt;/code&gt;  搜索 flag&lt;/p&gt;
+&lt;h3 id=&#34;反方向的雪&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#反方向的雪&#34;&gt;#&lt;/a&gt; 反方向的雪&lt;/h3&gt;
+&lt;p&gt;题目附件给了一张图片，在 010 里面看看&lt;br /&gt;
+&lt;a href=&#34;https://postimg.cc/34sg2Dkh&#34;&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://i.postimg.cc/6q3YJrw8/009.png&#34; alt=&#34;009.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;发现 jpg 文件尾后还有多余的信息，仔细看看发现是逐字节逆序的 zip 文件，结合题目名字反方向的提示&lt;br /&gt;
+将它单独提出来再逐字节逆序，网上可以找到很多类似的工具也可以自己写代码，得到逆序后正常的文件：&lt;br /&gt;
+&lt;a href=&#34;https://postimg.cc/WFG4fD9T&#34;&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://i.postimg.cc/mDqFkCCz/010.png&#34; alt=&#34;010.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://postimg.cc/sG12m3NJ&#34;&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://i.postimg.cc/x83b0CGB/011.png&#34; alt=&#34;011.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;
+ 得到一个压缩包，需要密码，注释里面有一个提示是 &lt;code&gt;The_key_is_n0secr3t&lt;/code&gt; ，但是这好像并不是压缩包的密码，&lt;strong&gt;hint&lt;/strong&gt; 给出密码为六位，尝试爆破压缩包密码：&lt;br /&gt;
+&lt;a href=&#34;https://postimg.cc/14gPv7zM&#34;&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://i.postimg.cc/h4sjPHRF/1280-X1280.png&#34; alt=&#34;1280-X1280.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;
+ 直接爆破得到密码是 123456，得到&lt;strong&gt; flag.txt&lt;/strong&gt;，但是没有 flag&lt;br /&gt;
+&lt;a href=&#34;https://postimg.cc/q62593SB&#34;&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://i.postimg.cc/prSM5QBj/012.png&#34; alt=&#34;012.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;
+ 其实还有很多空白字符，结合题目雪的提示，这里是 snow 隐写。&lt;br /&gt;
+这里附上 snow 隐写的官网，用法可以自己去了解一下：&lt;br /&gt;
+The SNOW Home Page (&lt;a href=&#34;http://darkside.com.au&#34;&gt;darkside.com.au&lt;/a&gt;)&lt;br /&gt;
+ 使用之前注释得到的 &lt;code&gt;key：n0secr3t&lt;/code&gt; （这里注意不要前面的东西：The_key_is_）解密即可得到 flag:&lt;br /&gt;
+&lt;a href=&#34;https://postimg.cc/jCGWc7Rw&#34;&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://i.postimg.cc/8PCh1R3H/013.png&#34; alt=&#34;013.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+</content>
+        <category term="BaseCTF" scheme="http://example.com/categories/BaseCTF/" />
+        <category term="线上赛" scheme="http://example.com/tags/%E7%BA%BF%E4%B8%8A%E8%B5%9B/" />
+        <updated>2024-10-22T13:18:32.323Z</updated>
+    </entry>
     <entry>
         <id>http://example.com/2024/10/22/hgame%E6%AF%94%E8%B5%9B/hgame2024-week2/</id>
         <title>hgame比赛-week2</title>
