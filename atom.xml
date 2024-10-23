@@ -28,7 +28,31 @@
 hex_string = &#39;&#39;.join(f&#39;&amp;#123;x:02X&amp;#125;&#39; for x in hex_values)
 print(hex_string)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;a href=&#34;https://postimg.cc/DJbnXj8j&#34;&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://i.postimg.cc/TwtwBBG6/s01.png&#34; alt=&#34;s01.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://postimg.cc/DJbnXj8j&#34;&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://i.postimg.cc/TwtwBBG6/s01.png&#34; alt=&#34;s01.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;
+ 然后就是 base64 解码。但是这里需要注意的是厨子里面要把 &lt;code&gt;移除输入中的非可用字符&lt;/code&gt; 这个选项关了，可以看到&lt;strong&gt; PK&lt;/strong&gt; 头出来了&lt;br /&gt;
+&lt;a href=&#34;https://postimg.cc/xJqyyH2F&#34;&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://i.postimg.cc/V6WGwBH1/s02.png&#34; alt=&#34;s02.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;
+ 然后就是提取并保存为 ZIP 文件，不过这里需要注意的是，如果删除不好，可能删多了前后，那就先保存出去，&lt;strong&gt;010Editor&lt;/strong&gt; 打开，修改十六进制（因为本人相较而言还是熟悉 ZIP 的十六进制格式的...）&lt;br /&gt;
+直接爆破⽆果，直接上⼤字典&lt;strong&gt; rockyou.txt&lt;/strong&gt;，爆出来了。&lt;br /&gt;
+&lt;a href=&#34;https://postimg.cc/F7xdzztf&#34;&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://i.postimg.cc/L6czygNV/s03.png&#34; alt=&#34;s03.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;有wifi干嘛不用呢&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#有wifi干嘛不用呢&#34;&gt;#&lt;/a&gt; 有 WiFi ⼲嘛不⽤呢？&lt;/h2&gt;
+&lt;p&gt;破解 wifi 密码，拿到的⽂件夹 may ⾥⾯是密码字典，⽤ aircrack-ng 直接爆就好了。&lt;br /&gt;
+可能需要注意的就是字典提取的时候需要去除 []。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://postimg.cc/xcFR86VN&#34;&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://i.postimg.cc/NjQPNnND/s04.png&#34; alt=&#34;s04.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;
+ &lt;code&gt;aircrack-ng file -w output&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;rasterizing-traffic&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#rasterizing-traffic&#34;&gt;#&lt;/a&gt; Rasterizing Traffic&lt;/h2&gt;
+&lt;p&gt;前面流量分析看一下，丢到 CTF-NetA 一把梭哈，有 PNG 文件，然后看得出来是光栅，然后能搜到下面脚本：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/AabyssZG/Raster-Terminator&#34;&gt;Raster-Terminator&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;这里出题人因为看到了网上有曾哥的一把梭脚本，为了锻炼一下选手就直接在生成光栅的时候把图片模式转换成了灰度图，然后直接运用那个工具爆破是会报错，转换图片为&lt;strong&gt; RGB 三通道&lt;/strong&gt;的导出就能用上面的脚本了，也可以自己写个脚本：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;from PIL import Image
+import numpy as np
+
+img = np.array(Image.open(r&#39;./download.png&#39;).convert(&#39;L&#39;)) 
+
+for i in range(5):
+    z = np.zeros_like(img)  
+    z[:, i::5] = img[:, i::5]  
+    Image.fromarray(z).show()
+&lt;/code&gt;&lt;/pre&gt;
 </content>
         <category term="线上赛" scheme="http://example.com/categories/%E7%BA%BF%E4%B8%8A%E8%B5%9B/" />
         <category term="线上赛" scheme="http://example.com/tags/%E7%BA%BF%E4%B8%8A%E8%B5%9B/" />
