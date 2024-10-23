@@ -10,9 +10,33 @@
         </author>
         <description>甘蔗🐭🐭的小破站，记录自己的生活~</description>
         <language>zh-CN</language>
-        <pubDate>Tue, 22 Oct 2024 21:18:32 +0800</pubDate>
-        <lastBuildDate>Tue, 22 Oct 2024 21:18:32 +0800</lastBuildDate>
+        <pubDate>Wed, 23 Oct 2024 20:55:25 +0800</pubDate>
+        <lastBuildDate>Wed, 23 Oct 2024 20:55:25 +0800</lastBuildDate>
         <category term="Hacker" />
+        <item>
+            <guid isPermalink="true">http://example.com/2024/10/23/%E7%BA%BF%E4%B8%8A%E8%B5%9B/SHCTF/</guid>
+            <title>SHCTF</title>
+            <link>http://example.com/2024/10/23/%E7%BA%BF%E4%B8%8A%E8%B5%9B/SHCTF/</link>
+            <category term="线上赛" scheme="http://example.com/categories/%E7%BA%BF%E4%B8%8A%E8%B5%9B/" />
+            <category term="线上赛" scheme="http://example.com/tags/%E7%BA%BF%E4%B8%8A%E8%B5%9B/" />
+            <pubDate>Wed, 23 Oct 2024 20:55:25 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;misc&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#misc&#34;&gt;#&lt;/a&gt; MISC&lt;/h1&gt;
+&lt;h2 id=&#34;quarantine&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#quarantine&#34;&gt;#&lt;/a&gt; Quarantine&lt;/h2&gt;
+&lt;p&gt;本人 MISC 的第一道取证分析题目，理所当然的没搞出来，嘻嘻🤭&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;题目描述&lt;/strong&gt;: shenghuo2 发来的文件被隔离了，也许通过一些取证技术可以在提取到的数据文件中发现什么信息.......&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;hint&lt;/strong&gt;：Do you know Windows defender？&lt;/p&gt;
+&lt;p&gt;结合题目描述和题目名称，关键词搜索很容易定位到 Windows defender 的隔离文件&lt;/p&gt;
+&lt;p&gt;例如：&lt;a href=&#34;https://blog.fox-it.com/2023/12/14/reverse-reveal-recover-windows-defender-quarantine-forensics/&#34;&gt;https://blog.fox-it.com/2023/12/14/reverse-reveal-recover-windows-defender-quarantine-forensics/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;找到⼀个 &lt;a href=&#34;https://remnux.org/%EF%BC%8C&#34;&gt;https://remnux.org/，&lt;/a&gt; 似乎能恢复⼤多数杀毒软件隔离区的⽂件。&lt;/p&gt;
+&lt;p&gt;使用了 RC4 加密且 key 为硬编码，参考： &lt;a href=&#34;https://github.com/brad-sp/cuckoo-modified/commit/61087cae2e40c8b26f94162c652b4bc48256264b#diff-a171a256ae06a65170deb04a3ba4c27d5a3bbb5ee767f66465742abe902b5104R185&#34;&gt;https://github.com/brad-sp/cuckoo-modified/commit/61087cae2e40c8b26f94162c652b4bc48256264b#diff-a171a256ae06a65170deb04a3ba4c27d5a3bbb5ee767f66465742abe902b5104R185&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;参考文档找到 &lt;code&gt;key&lt;/code&gt; ，用 &lt;code&gt;key&lt;/code&gt;  去厨子里面&lt;strong&gt; RC4&lt;/strong&gt; 解密，注意这里厨子里 key 需要使用 &lt;code&gt;十六进制&lt;/code&gt; ，然后需要将&lt;strong&gt; 0x&lt;/strong&gt; 格式去除，可以编写一个脚本跑一下。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;hex_values = [0x1E, 0x87, ...]
+hex_string = &#39;&#39;.join(f&#39;&amp;#123;x:02X&amp;#125;&#39; for x in hex_values)
+print(hex_string)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;a href=&#34;https://postimg.cc/DJbnXj8j&#34;&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://i.postimg.cc/TwtwBBG6/s01.png&#34; alt=&#34;s01.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">http://example.com/2024/10/22/%E7%BA%BF%E4%B8%8A%E8%B5%9B/BaseCTF/</guid>
             <title>BaseCTF</title>

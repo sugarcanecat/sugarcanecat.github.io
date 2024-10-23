@@ -7,6 +7,17 @@
     "home_page_url": "http://example.com",
     "items": [
         {
+            "id": "http://example.com/2024/10/23/%E7%BA%BF%E4%B8%8A%E8%B5%9B/SHCTF/",
+            "url": "http://example.com/2024/10/23/%E7%BA%BF%E4%B8%8A%E8%B5%9B/SHCTF/",
+            "title": "SHCTF",
+            "date_published": "2024-10-23T12:55:25.332Z",
+            "content_html": "<h1 id=\"misc\"><a class=\"anchor\" href=\"#misc\">#</a> MISC</h1>\n<h2 id=\"quarantine\"><a class=\"anchor\" href=\"#quarantine\">#</a> Quarantine</h2>\n<p>本人 MISC 的第一道取证分析题目，理所当然的没搞出来，嘻嘻🤭</p>\n<p><strong>题目描述</strong>: shenghuo2 发来的文件被隔离了，也许通过一些取证技术可以在提取到的数据文件中发现什么信息.......</p>\n<p><strong>hint</strong>：Do you know Windows defender？</p>\n<p>结合题目描述和题目名称，关键词搜索很容易定位到 Windows defender 的隔离文件</p>\n<p>例如：<a href=\"https://blog.fox-it.com/2023/12/14/reverse-reveal-recover-windows-defender-quarantine-forensics/\">https://blog.fox-it.com/2023/12/14/reverse-reveal-recover-windows-defender-quarantine-forensics/</a></p>\n<p>找到⼀个 <a href=\"https://remnux.org/%EF%BC%8C\">https://remnux.org/，</a> 似乎能恢复⼤多数杀毒软件隔离区的⽂件。</p>\n<p>使用了 RC4 加密且 key 为硬编码，参考： <a href=\"https://github.com/brad-sp/cuckoo-modified/commit/61087cae2e40c8b26f94162c652b4bc48256264b#diff-a171a256ae06a65170deb04a3ba4c27d5a3bbb5ee767f66465742abe902b5104R185\">https://github.com/brad-sp/cuckoo-modified/commit/61087cae2e40c8b26f94162c652b4bc48256264b#diff-a171a256ae06a65170deb04a3ba4c27d5a3bbb5ee767f66465742abe902b5104R185</a></p>\n<p>参考文档找到 <code>key</code> ，用 <code>key</code>  去厨子里面<strong> RC4</strong> 解密，注意这里厨子里 key 需要使用 <code>十六进制</code> ，然后需要将<strong> 0x</strong> 格式去除，可以编写一个脚本跑一下。</p>\n<pre><code>hex_values = [0x1E, 0x87, ...]\nhex_string = ''.join(f'&#123;x:02X&#125;' for x in hex_values)\nprint(hex_string)\n</code></pre>\n<p><a href=\"https://postimg.cc/DJbnXj8j\"><img loading=\"lazy\" data-src=\"https://i.postimg.cc/TwtwBBG6/s01.png\" alt=\"s01.png\" /></a></p>\n",
+            "tags": [
+                "线上赛",
+                "线上赛"
+            ]
+        },
+        {
             "id": "http://example.com/2024/10/22/%E7%BA%BF%E4%B8%8A%E8%B5%9B/BaseCTF/",
             "url": "http://example.com/2024/10/22/%E7%BA%BF%E4%B8%8A%E8%B5%9B/BaseCTF/",
             "title": "BaseCTF",
