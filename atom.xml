@@ -18,9 +18,9 @@
 &lt;h2 id=&#34;web&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#web&#34;&gt;#&lt;/a&gt; Web&lt;/h2&gt;
 &lt;h3 id=&#34;sign&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#sign&#34;&gt;#&lt;/a&gt; Sign&lt;/h3&gt;
 &lt;p&gt;题目提示了 “输入密码即可使用蚁剑”，直接尝试蚁剑连接即可，然后在根目录下发现 flag 文件&lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;C:%5CUsers%5CSugarcane%5CDesktop%5Cwp%5CWeb-Sgin2.png&#34; alt=&#34;Web-Sgin2&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;C:%5CUsers%5CSugarcane%5CDesktop%5Cwp%5CWeb-Sign1.png&#34; alt=&#34;Web-Sign1&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;C:%5CUsers%5CSugarcane%5CDesktop%5Cwp%5CWeb-Sign.png&#34; alt=&#34;Web-Sign&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://postimg.cc/ppwYBbhm&#34;&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://i.postimg.cc/XYJH4nnk/Web-Sgin2.png&#34; alt=&#34;Web-Sgin2.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://postimg.cc/Y4k6J6xk&#34;&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://i.postimg.cc/0NKVKZM6/Web-Sign1.png&#34; alt=&#34;Web-Sign1.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://postimg.cc/5jGwxdms&#34;&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://i.postimg.cc/HsW39T81/Web-Sign.png&#34; alt=&#34;Web-Sign.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;crypto&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#crypto&#34;&gt;#&lt;/a&gt; Crypto&lt;/h2&gt;
 &lt;h3 id=&#34;easy&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#easy&#34;&gt;#&lt;/a&gt; Easy&lt;/h3&gt;
 &lt;p&gt;题目中给出的伪代码和数据描述了如何生成密钥流并用它来 解密 &lt;code&gt;flag&lt;/code&gt; 。 &lt;code&gt;key = &amp;quot;hello world&amp;quot;&lt;/code&gt;  是解密的密钥。&lt;/p&gt;
@@ -84,21 +84,20 @@ flag = rc4_decrypt(key, encrypted_flag)
 
 print(&amp;quot;解密后的flag:&amp;quot;, flag)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;C:%5CUsers%5CSugarcane%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20241201213143503.png&#34; alt=&#34;image-20241201213143503&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://postimg.cc/K3yxNY29&#34;&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://i.postimg.cc/D0S07WYK/image-20241201213143503.png&#34; alt=&#34;image-20241201213143503.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;misc&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#misc&#34;&gt;#&lt;/a&gt; MISC&lt;/h2&gt;
 &lt;h3 id=&#34;sign-2&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#sign-2&#34;&gt;#&lt;/a&gt; Sign&lt;/h3&gt;
 &lt;p&gt;签到题，直接丢到 **“随波逐流”** 一把梭，得到结果&lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;C:%5CUsers%5CSugarcane%5CDesktop%5Cwp%5CMISC-Sign.png&#34; alt=&#34;MISC-Sign&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://postimg.cc/yDnx80H7&#34;&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://i.postimg.cc/fbQ95vqS/MISC-Sign.png&#34; alt=&#34;MISC-Sign.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;太极&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#太极&#34;&gt;#&lt;/a&gt; 太极&lt;/h3&gt;
 &lt;p&gt;根据题目的几个提示，可以猜到是拼音有关，先查看页面给出的内容，转换一下字体，得到正确的中文内容&lt;/p&gt;
-&lt;p&gt;![屏幕截图 2024-12-01 213614](C:\Users\Sugarcane\OneDrive\ 图片 \ 屏幕快照 \ 屏幕截图 2024-12-01 213614.png)&lt;/p&gt;
-&lt;p&gt;然后根据提示分析拼音提取的规律，不难发现是根据每个字符的位置按照 “1、2、3、4、5” 的顺序循环，这里需要注意的是不够的字符就重头循环，随后可以得到后面的字符内容：&lt;/p&gt;
-&lt;p&gt;![bab478d57bc0e0f40121c188ee6078e6](C:\Users\Sugarcane\OneDrive\ 文档 \Tencent Files\2220961868\nt_qq\nt_data\Pic\2024-12\Ori\bab478d57bc0e0f40121c188ee6078e6.png)&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://postimg.cc/mtjBYR6w&#34;&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://i.postimg.cc/QdGCrdQR/2024-12-01-213614.png&#34; alt=&#34;2024-12-01-213614.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;
+ 然后根据提示分析拼音提取的规律，不难发现是根据每个字符的位置按照 “1、2、3、4、5” 的顺序循环，这里需要注意的是不够的字符就重头循环，随后可以得到后面的字符内容&lt;/p&gt;
 &lt;p&gt;完整的 flag： &lt;code&gt;WuCup&amp;#123;tieny-lieig-sieau-bunig-jieay&amp;#125;&lt;/code&gt;&lt;/p&gt;
 &lt;h3 id=&#34;旋转木马&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#旋转木马&#34;&gt;#&lt;/a&gt; 旋转木马&lt;/h3&gt;
 &lt;p&gt;给了两个很大的文件，这里最先开始尝试了 base64 分别解码，有点问题，厨子还解不了，后面发现两段内容的格式差不多，尝试在 flag1 后拼接 flag2 的内容&lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;C:%5CUsers%5CSugarcane%5CDesktop%5Cwp%5C%E6%97%8B%E8%BD%AC%E6%9C%A8%E9%A9%AC0.png&#34; alt=&#34;旋转木马0&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;这里知道厨子解不了这么大的后，想到编写脚本解 base64，然后即是循环解 base64，得到内容：&lt;img loading=&#34;lazy&#34; data-src=&#34;C:%5CUsers%5CSugarcane%5CDesktop%5Cwp%5C%E6%97%8B%E8%BD%AC%E6%9C%A8%E9%A9%AC1.png&#34; alt=&#34;旋转木马1&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://postimg.cc/sQGgm8Z2&#34;&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://i.postimg.cc/tT2nqGqF/0.png&#34; alt=&#34;0.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;这里知道厨子解不了这么大的后，想到编写脚本解 base64，然后即是循环解 base64，得到内容：&lt;a href=&#34;https://postimg.cc/6TRQGkXj&#34;&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://i.postimg.cc/zD2H4NPr/1.png&#34; alt=&#34;1.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;循环解 base64 脚本：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;# -*- coding:utf-8 -*-
 # 使用说明：直接在脚本中设置文件路径，脚本会读取并进行多次Base64解码
@@ -135,15 +134,15 @@ if __name__ == &#39;__main__&#39;:
     base64decoding_from_file(file_path)
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;将这段内容丢到 **“随波逐流”** 一把梭，即可得到 flag：&lt;br /&gt;
-&lt;img loading=&#34;lazy&#34; data-src=&#34;C:%5CUsers%5CSugarcane%5CDesktop%5Cwp%5C%E6%97%8B%E8%BD%AC%E6%9C%A8%E9%A9%AC2.png&#34; alt=&#34;旋转木马2&#34; /&gt;&lt;/p&gt;
+&lt;a href=&#34;https://postimg.cc/9rhQPLXW&#34;&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://i.postimg.cc/ncs9JW6Q/2.png&#34; alt=&#34;2.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;原神启动&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#原神启动&#34;&gt;#&lt;/a&gt; 原神启动！&lt;/h3&gt;
 &lt;p&gt;给了一个图片和一个压缩包，压缩包发现有密码，从图片入手，尝试后发现用 **“Stegsolve”** 工具查看 Red plane 2 下有密码 1： &lt;code&gt;WuCup&amp;#123;7c16e21c-31c2-439e-a814-bba2ca54101a&amp;#125;&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;C:%5CUsers%5CSugarcane%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20241201215330710.png&#34; alt=&#34;image-20241201215330710&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;解开压缩包后，发现是 docx 文件，docx 文件可以直接改后缀为 zip 文件，解压。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://postimg.cc/0MkL2J91&#34;&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://i.postimg.cc/RFK9dc8h/image-20241201215330710.png&#34; alt=&#34;image-20241201215330710.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;
+ 解开压缩包后，发现是 docx 文件，docx 文件可以直接改后缀为 zip 文件，解压。&lt;/p&gt;
 &lt;p&gt;又发现一个 img.zip 文件，同样需要密码，同时在 media 目录下发现一张图片，能隐约看到字符，同样是 **“Stegsolve”** 工具查看 Gray bits 得到密码 2： &lt;code&gt;WuCup&amp;#123;6bb9d97d-7169-434b-a7cf-0ee0b6fdfa30&amp;#125;&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;%E5%9D%A4%E5%9D%A4%E7%88%86%E4%BC%9A%E8%B5%A2%E5%98%9B%EF%BC%9FWP/image-20241201220543031.png&#34; alt=&#34;image-20241201220543031&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://postimg.cc/vcJkxKGz&#34;&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://i.postimg.cc/GmtCV0NZ/image-20241201220543031.png&#34; alt=&#34;image-20241201220543031.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;解压 img.zip 后得到 text.zip 文件，这里最先想到直接爆破，但考虑到前几个密码的格式，爆破时间也不现实，就回头找 docx 里面是否还藏了东西，后来逐个检查文件内容，发现 &lt;code&gt;/word/document.xml&lt;/code&gt;  内容有断断续续的密码，拼接后即是密码 3： &lt;code&gt;WuCup&amp;#123;f848566c-3fb6-4bfd-805a-d9e102511784&amp;#125;&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;C:%5CUsers%5CSugarcane%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20241201220209452.png&#34; alt=&#34;image-20241201220209452&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://postimg.cc/G8m51wjc&#34;&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://i.postimg.cc/zBCZKqbR/image-20241201220209452.png&#34; alt=&#34;image-20241201220209452.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;最后解出 text.txt 内容：&lt;br /&gt;
 &lt;img loading=&#34;lazy&#34; data-src=&#34;C:%5CUsers%5CSugarcane%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20241201220400676.png&#34; alt=&#34;image-20241201220400676&#34; /&gt;&lt;/p&gt;
 </content>
